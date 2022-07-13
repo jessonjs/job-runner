@@ -29,6 +29,11 @@ class JobRunner extends EventEmitter {
     this.on('complete', jobCompletion);
     this.on('failed', jobFailure);
   }
+  
+  start() {
+    this.emit('start');
+    return this;
+  }
 }
 
 module.exports = { JobRunner };
