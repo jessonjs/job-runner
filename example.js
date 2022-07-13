@@ -9,5 +9,5 @@ const jobs = new Array(5).fill(() => {
 
 for (const job of jobs) {
   console.log('started');
-  new JobRunner({ job }).emit('start');
+  new JobRunner({ job }).start();
 }
